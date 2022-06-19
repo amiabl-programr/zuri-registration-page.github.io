@@ -39,14 +39,34 @@ header > p {
   border-radius: 9px;
   display: flex;
   flex-direction: column;
+  color: white;
 }
 .form-container {
   display: grid;
   place-items: center;
 }
 form {
+  width: 300px;
   background-color: white;
   display: grid;
   place-items: center;
   margin: 1rem;
+  padding: 1rem;
+}
+input {
+  padding: 10px;
+  margin: 10px 0;
+  outline: none;
+  font-weight: bold;
+}
+.cta--green {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 9px;
+  background-color: hsl(154, 59%, 51%);
+}
+.footer__tos {
+  width: 150px;
+  text-align: center;
+  font-size: 14px;
 }
