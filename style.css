@@ -7,6 +7,7 @@
 html,
 body {
   height: 100vh;
+  font-family: "Poppins", serif;
 }
 
 body {
@@ -14,12 +15,10 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-color: hsl(0, 100%, 74%);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 main {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,16 +31,19 @@ header {
   align-items: center;
   text-align: center;
 }
+
+header > p {
+  color: white;
+  padding: 2rem 2rem;
+}
+
 h1 {
   color: white;
   font-family: "Poppins", serif;
 }
 
-header > p {
-  color: white;
-  width: 28rem;
-}
 .cta--blue {
+  font-family: "Poppins", serif;
   width: 100%;
   background-color: hsl(248, 32%, 49%);
   padding: 1rem 2rem;
@@ -60,7 +62,7 @@ header > p {
   place-items: center;
 }
 form {
-  width: 300px;
+  width: 24rem;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -70,13 +72,22 @@ form {
   box-shadow: 0px 8px hsl(249deg 10% 26% / 18%);
 }
 input {
+  font-family: "Poppins", serif;
   padding: 10px;
   margin: 10px 0;
   outline: none;
   font-weight: bold;
   width: 100%;
 }
+
+input:required:invalid:focus-visible {
+  background-image: url("./images/icon-error.svg");
+  background-repeat: no-repeat;
+  background-position: 90%;
+  border: 1px solid hsl(0, 100%, 74%);
+}
 .cta--green {
+  font-family: "Poppins", serif;
   padding: 1rem 2rem;
   border: none;
   border-radius: 9px;
@@ -84,29 +95,53 @@ input {
   color: white;
   cursor: pointer;
 }
+
 .form__tos {
   color: hsl(249, 10%, 26%);
   text-align: center;
   font-size: 14px;
 }
 
+.form__tos > span {
+  font-weight: bold;
+  color: hsl(0, 100%, 74%);
+}
+
+@media (min-width: 550px) {
+  header > p {
+    padding: 2rem 5rem;
+  }
+}
+
 @media (min-width: 768px) {
   body {
     background-image: url("./images/bg-intro-desktop.png");
+  }
+  main {
     flex-direction: row;
-    align-items: center;
+    margin: 0 2rem;
   }
   header {
     text-align: left;
     align-items: flex-start;
+  }
+  header > p {
+    padding: 0;
   }
   .cta--blue {
     flex-direction: row;
   }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1024px) {
   form {
     width: 28rem;
+  }
+  main {
+    margin: 0 5rem;
+  }
+
+  header {
+    padding: 0 9rem 0 0;
   }
 }
